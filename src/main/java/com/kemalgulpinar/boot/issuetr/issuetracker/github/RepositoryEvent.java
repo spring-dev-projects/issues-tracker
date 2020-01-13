@@ -26,6 +26,22 @@ public class RepositoryEvent {
         this.issue = issue;
     }
 
+    public Type getType() {
+        return type;
+    }
+
+    public OffsetDateTime getCreationTime() {
+        return creationTime;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public Issue getIssue() {
+        return issue;
+    }
+
     public enum Type{
 
         CLOSED("closed"),

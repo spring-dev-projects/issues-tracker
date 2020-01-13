@@ -18,6 +18,9 @@ public class GithubProject implements Serializable {
     @Column(unique=true)
     private String repoName;
 
+    public GithubProject() {
+    }
+
     public GithubProject(String orgName, String repoName){
         this.orgName = orgName;
         this.repoName = repoName;
