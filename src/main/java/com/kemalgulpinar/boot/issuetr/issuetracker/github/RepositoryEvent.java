@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.OffsetDateTime;
 
-public class RepositoryEvents {
+public class RepositoryEvent {
 
     private final Type type;
 
@@ -16,10 +16,10 @@ public class RepositoryEvents {
     private final Issue issue;
 
     @JsonCreator
-    public RepositoryEvents(@JsonProperty("event") String type,
-                            @JsonProperty("created_at") OffsetDateTime creationTime,
-                            @JsonProperty("actor") Actor actor,
-                            @JsonProperty("issue") Issue issue){
+    public RepositoryEvent(@JsonProperty("event") String type,
+                           @JsonProperty("created_at") OffsetDateTime creationTime,
+                           @JsonProperty("actor") Actor actor,
+                           @JsonProperty("issue") Issue issue){
         this.type = Type.valueFrom(type);
         this.creationTime = creationTime;
         this.actor = actor;

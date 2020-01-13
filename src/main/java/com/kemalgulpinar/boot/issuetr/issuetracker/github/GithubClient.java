@@ -15,7 +15,7 @@ public class GithubClient {
         this.restTemplate = builder.build();
     }
 
-    public ResponseEntity<RepositoryEvents[]> fetchEvents(String orgName, String repoName){
-        return this.restTemplate.getForEntity(EVENT_ISSUES_URL, RepositoryEvents[].class, orgName, repoName);
+    public ResponseEntity<RepositoryEvent[]> fetchEvents(String orgName, String repoName){
+        return this.restTemplate.getForEntity(EVENT_ISSUES_URL, RepositoryEvent[].class, orgName, repoName);
     }
 }
